@@ -1,0 +1,57 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Django
+*.log
+*.pot
+*.pyc
+*.sqlite3
+local_settings.py
+/media
+/static
+
+# venv
+venv/
+
+# macOS
+.DS_Store
+
+# PyCharm files
+.idea/
+
+# Ignore pipenv virtual environment
+/.venv
+
+# Ignore Poetry virtual environment
+/.venv/
+
+# Ignore virtualenvwrapper environment
+/.virtualenvs/
+
+# Ignore pip generated files:
+pip-log.txt
+
+# Ignore pytest cache
+.pytest_cache/
+
+# Ignore mypy cache
+.mypy_cache/
+
+# Ignore coverage reports
+.coverage
+.coverage.*
+
+# Ignore VSCode files
+.vscode/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Heroku local settings
+/.env
+
+# Ignore Docker files
+.dockerignore
+.dockerenv
