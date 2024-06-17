@@ -1,54 +1,75 @@
-Blog API Django (Practice AITU)
+# Blog API Django (Practice AITU)
 
-Этот проект представляет собой простой API для блога, реализованный на Django, с использованием Django REST Framework.
+This project is a simple blog API implemented in Django, using Django REST Framework.
 
-## Запуск проекта
+---
 
+## Running the Project
 
-### Требования
+### Requirements
 
-- Python 3.9+
+- Python 3.10+
 - Docker
 
-### Установка
+### Installation
 
-Создать и активировать виртуальное окружение (опционально, если не используется Docker):
+Create and activate a virtual environment (optional if not using Docker):
 
+```
 python -m venv venv
-. venv/bin/activate  # для Unix/macOS
-venv\Scripts\activate  # для Windows
+. venv/bin/activate  # for Unix/macOS
+venv\Scripts\activate  # for Windows
+```
 
+## Install dependencies:
 
-Установить зависимости:
+```
 pip install -r requirements.txt
+```
 
-Запуск с использованием Docker
-Собрать и запустить контейнер:
+### Running with Docker
+
+Build and run the Docker container:
+
+```
 docker build -t blogproject .
 docker run -p 8000:8000 blogproject
+```
+### Running without Docker
 
-
-Запуск без Docker
-Применить миграции базы данных:
+Apply database migrations:
+```
 python manage.py migrate
-
-Создать суперпользователя для доступа к админке:
+```
+Create a superuser for accessing the admin panel:
+```
 python manage.py createsuperuser
-
-Запустить сервер разработки:
+```
+Start the development server:
+```
 python manage.py runserver
+```
 
-Доступ к админ панели
-Админ панель доступна по адресу http://localhost:8000/admin/.
-Используйте учетные данные созданного суперпользователя для входа.
+## Accessing the Admin Panel
 
-Использование API
-API предоставляет следующие эндпоинты:
-/api/token/: Получение JWT токена для аутентификации.
-/api/token/refresh/: Обновление JWT access токена.
-/api/posts/: Эндпоинты для управления постами (GET, POST, PUT, DELETE).
-/api/comments/: Эндпоинты для управления комментариями (GET, POST, PUT, DELETE).
-Для доступа к защищенным эндпоинтам требуется передача JWT access токена в заголовке Authorization.
+The admin panel is available at http://localhost:8000/admin/.
+Use the credentials of the superuser created earlier to log in.
 
-Примечание
-Для полного функционирования проекта рекомендуется ознакомиться с настройками и документацией Django и Django REST Framework.
+---
+
+## Using the API
+
+The API provides the following endpoints:
+
+- `/api/token/`: Obtain JWT token for authentication.
+- `/api/token/refresh/`: Refresh JWT access token.
+- `/api/posts/`: Endpoints for managing posts (GET, POST, PUT, DELETE).
+- `/api/comments/`: Endpoints for managing comments (GET, POST, PUT, DELETE).
+
+To access protected endpoints, include the JWT access token in the Authorization header.
+
+---
+
+## Note
+
+For full functionality of the project, it is recommended to familiarize yourself with Django and Django REST Framework settings and documentation.
